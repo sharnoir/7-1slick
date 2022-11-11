@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    width: 1500px;
+    margin: auto;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8) url(img/Cover_anni40-50_1920x800.jpg) no-repeat;
+    background-size: cover;
+    background-blend-mode: hue;
+}
+
+/* header */
+
+header {
+    padding-top: 20px;
+    height: 100px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo {
+    width: 150px;
+}
+
+header .container .logo a {}
+
+header .container .logo a img {
+    width: 100px;
+}
+
+header .menu_wrap {}
+
+header .menu_wrap ul {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+}
+
+header .menu_wrap ul li {}
+
+header .menu_wrap ul li a {}
+
+header .search {}
+
+header .search a {}
+
+header .search a i {}
+
+/* main */
+
+.main {
+    margin-top: 5%;
+}
+
+.main .slider {}
+
+.main .slider .slick-slide {
+    display: flex;
+    overflow: hidden;
+}
+
+.main .slider .slick-slide .left_area {
+    position: relative;
+
+    width: 50%;
+}
+
+.main .slider .slick-slide .right_area {
+    position: relative;
+
+    width: 50%;
+}
+
+.main .slider .slick-slide .right_area .text_area {
+    position: absolute;
+    left: 5%;
+    top: 45%;
+}
+
+.main .slider .slick-slide .right_area .text_area ul {}
+
+.main .slider .slick-slide .right_area .text_area ul li {
+    position: relative;
+    padding-left: 15px;
+}
+
+.main .slider .slick-slide.slick-active .right_area .text_area ul li:nth-child(1) {
+    animation: fadeInB 0.5s 1.2s both;
+}
+
+.main .slider .slick-slide.slick-active .right_area .text_area ul li:nth-child(2) {
+    animation: fadeInB 0.5s 1.4s both;
+}
+
+.main .slider .slick-slide .right_area .text_area ul li:before {
+    content: '';
+    width: 4px;
+    height: 2px;
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    top: 28px;
+}
+
+.main .slider .slick-slide .right_area .text_area ul li a {
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.main .slider .slick-slide .left_area .vespa_img {
+    /* 오토바이 큰이미지 */
+    width: 120%;
+    padding-top: 160px;
+
+}
+
+.main .slider .slick-slide.slick-active .left_area .vespa_img {
+    animation: fadeInR 0.5s 0.5s both;
+}
+
+.main .slider .slick-slide .left_area .vespa_img img {
+    width: 100%;
+}
+
+.main .slider .slick-slide .left_area .vespa_tit {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    z-index: -1;
+}
+
+
+.main .slider .slick-slide .left_area .vespa_tit h2 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 135px;
+}
+
+.main .slider .slick-slide.slick-active .left_area .vespa_tit h2 {
+    animation: fadeInL 0.5s 0.8s both;
+}
+
+.main .slider .slick-slide .left_area .vespa_tit p {
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 18px;
+}
+
+.main .slider .slick-slide.slick-active .left_area .vespa_tit p {
+    animation: fadeInL 0.5s 1s both;
+}
+
+
+.main .slider .slick-slide .right_area .buttom_area {
+    display: flex;
+    position: absolute;
+    top: 70%;
+    left: 5%;
+}
+
+.main .slider .slick-slide .right_area .buttom_area .custom_btn {
+    border: 2px solid #fff;
+    margin-right: 20px;
+    position: relative;
+}
+
+.main .slider .slick-slide .right_area .buttom_area .custom_btn a {
+    display: block;
+    padding: 10px 50px 10px 30px;
+}
+
+.main .slider .slick-slide .right_area .buttom_area .custom_btn span {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 15px;
+}
+
+.main .slider .slick-slide .right_area .download_btn {
+    background-color: #38a385;
+    margin-right: 30px;
+}
+
+.main .slider .slick-slide .right_area .download_btn a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.main .slider .slick-slide .right_area .price {}
+
+.main .slider .slick-slide .right_area .price span {
+    color: #fff;
+    font-size: 24px;
+    line-height: 42px;
+}
+
+@keyframes fadeInR {
+    0% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInL {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInB {
+    0% {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* slick button */
+
+.main .slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    font-size: 0;
+}
+
+.main .slider .slick-prev {
+    left: -10%;
+}
+
+.main .slider .slick-prev:after {
+    content: "\f053";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    visibility: visible;
+    color: #38a385;
+    font-size: 48px;
+}
+
+.main .slider .slick-next {
+    right: -10%;
+}
+
+.main .slider .slick-next:after {
+    content: "\f054";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    visibility: visible;
+    color: #38a385;
+    font-size: 48px;
+}
